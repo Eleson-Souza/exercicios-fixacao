@@ -13,6 +13,7 @@ function convertBinaryToDecimal() {
     for(var i = 0; i < valorStr.length; i++) {
         acumDec += (arrayValor[i] * Math.pow(2, exp));
         exp--;
+        //console.log(`${arrayValor[i]} * (2 ^ ${exp}) = ${acumDec}`); // teste
     }
     // Exibindo no elemento do HTML o resultado da conversão.
     resultado.innerText = acumDec;
