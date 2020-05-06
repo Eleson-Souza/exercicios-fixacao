@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Conversão Binário para Decimal</h2>
+        <form action="#" method="post">
+            <input type="text" name="binary" id="binary" placeholder="Informe um valor em binário" maxlength="8" onkeypress="validarTecla(event)"> <br>
+            <button type="button" onclick="convertBinaryToDecimal()">Converter</button>
+        </form>
+        <div class="resultado">
+            Resultado: <strong id="resultado">___</strong>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

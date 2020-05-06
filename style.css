@@ -1,0 +1,39 @@
+body {
+    font: 12pt 'Arial';
+    background-image: url('https://conceitosopticos.com.br/wp-content/uploads/2016/12/template-fundo-site-conseitos-opticos-4.jpg');
+}
+
+.container {
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #000;
+    width: fit-content;
+    padding: 0px 20px 20px 20px;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #d6d6d6;
+}
+
+input {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14pt;
+}
+
+button {
+    background-color: #3077b9;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12pt;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.resultado {
+    margin-top: 20px;
+    border: 2px dotted #000;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 14pt;
+}
