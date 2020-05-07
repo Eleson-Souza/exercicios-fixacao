@@ -14,6 +14,12 @@ function formatarDiv(local, input) {
         case 'inf-dir':
             arrayBorders[3] = input.value;
             break;
+        case 'width':
+            div.width = `${input.value}px`;
+            break;
+        case 'height':
+            div.height = `${input.value}px`;
+            break;
     }
 
     var strBorder = '';
@@ -23,4 +29,10 @@ function formatarDiv(local, input) {
 
     console.log(strBorder);
     div.borderRadius = strBorder;
+}
+
+function alterarCor(inputColor) {
+    const div = document.getElementById('div-border-radius').style;
+    var cor = inputColor.value;
+    div.backgroundColor = cor;
 }

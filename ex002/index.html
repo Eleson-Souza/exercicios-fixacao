@@ -11,16 +11,19 @@
         <h2>Gerador de Border-Radius</h2>
         <hr>
         <form action="#" method="post" id="form-border-radius">
-            <input type="number" name="largura" id="largura" placeholder="Largura">
-            <input type="number" name="altura" id="altura" placeholder="Altura">
+            <input type="number" name="largura" id="largura" placeholder="Largura"  onkeyup="formatarDiv('width', this)">
+            <input type="number" name="altura" id="altura" placeholder="Altura"  onkeyup="formatarDiv('height', this)">
 
-            <input type="number" name="sup-esq" id="sup-esq" placeholder="Canto superior esquerdo" onkeyup="formatarDiv('sup-esq', this)">
+            <input type="number" name="sup-esq" id="sup-esq" placeholder="Superior esquerdo" onkeyup="formatarDiv('sup-esq', this)">
 
-            <input type="number" name="sup-dir" id="sup-dir" placeholder="Canto superior direito" onkeyup="formatarDiv('sup-dir', this)">
+            <input type="number" name="sup-dir" id="sup-dir" placeholder="Superior direito" onkeyup="formatarDiv('sup-dir', this)">
 
-            <input type="number" name="inf-esq" id="inf-esq" placeholder="Canto inferior esquerdo" onkeyup="formatarDiv('inf-esq', this)">
+            <input type="number" name="inf-esq" id="inf-esq" placeholder="Inferior esquerdo" onkeyup="formatarDiv('inf-esq', this)">
             
-            <input type="number" name="inf-dir" id="inf-dir" placeholder="Canto inferior direito" onkeyup="formatarDiv('inf-dir', this)">
+            <input type="number" name="inf-dir" id="inf-dir" placeholder="Inferior direito" onkeyup="formatarDiv('inf-dir', this)">
+
+            <br><br>
+            <input type="color" name="cor" id="cor" value="#e05d5d" onchange="alterarCor(this)">
         </form>
         <div id="div-border-radius"></div>
     </div>
