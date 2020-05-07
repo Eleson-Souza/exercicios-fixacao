@@ -21,8 +21,9 @@ function convertBinaryToDecimal() {
 
 // Função valida se o usuário está informando apenas 0 ou 1 a partir dos seus respectivos códigos na tabela ASCii.
 function validarTecla(event) {
-    if(event.keyCode != 48 && event.keyCode != 49) {
+    if(event.keyCode != 96 && event.keyCode != 97) {
         event.preventDefault();
-        alert('Caractere inválido, informe apenas 0 ou 1!');
+        var caractere = event.key; // retorna o caractere digitado.
+        alert(`O caractere "${caractere}" não é inválido, informe apenas 0 ou 1!`);
     }
 }
