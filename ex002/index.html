@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Border-Radius</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gerador de Border-Radius</h2>
+        <hr>
+        <form action="#" method="post" id="form-border-radius">
+            <input type="number" name="largura" id="largura" placeholder="Largura">
+            <input type="number" name="altura" id="altura" placeholder="Altura">
+
+            <input type="number" name="sup-esq" id="sup-esq" placeholder="Canto superior esquerdo" onkeyup="formatarDiv('sup-esq', this)">
+
+            <input type="number" name="sup-dir" id="sup-dir" placeholder="Canto superior direito" onkeyup="formatarDiv('sup-dir', this)">
+
+            <input type="number" name="inf-esq" id="inf-esq" placeholder="Canto inferior esquerdo" onkeyup="formatarDiv('inf-esq', this)">
+            
+            <input type="number" name="inf-dir" id="inf-dir" placeholder="Canto inferior direito" onkeyup="formatarDiv('inf-dir', this)">
+        </form>
+        <div id="div-border-radius"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

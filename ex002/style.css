@@ -1,0 +1,29 @@
+body {
+    font: 12pt 'Ubuntu';
+}
+
+h2 {
+    margin-top: 0px;
+    text-align: center;
+    background-color: #e07f3e;
+    padding: 10px;
+}
+
+.container {
+    border: 2px solid #000;
+    width: fit-content;
+    margin: auto;
+    padding: 15px;
+}
+
+#div-border-radius {
+    background-color: rgb(224, 93, 93);
+    width: 400px;
+    height: 400px;
+    margin: 20px auto auto auto;
+    border-radius: initial;
+}
+
+#form-border-radius input {
+    width: 165px;
+}
