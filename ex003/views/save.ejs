@@ -1,0 +1,36 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navbar.ejs') %>
+<div class="container">
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <% if(success.length > 0) { %>
+                <div class="alert alert-success">
+                    <%= success %>
+                </div>
+            <% } %>
+
+            <% if(error.length > 0) { %>
+                <div class="alert alert-danger">
+                    <%= error %>
+                </div>
+            <% } %>
+
+            <h2>Salvando arquivos de texto</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/save-document">
+                <input type="text" name="title" id="title" placeholder="Título do arquivo..." class="form-control mb-3" required>
+
+                <input type="text" name="path" id="path" placeholder="Caminho para salvamento do arquivo (Opcional)" title="Por padrão este arquivo será salvo em: 'D:\Área de Trabalho\Projetos Node JS\Exercícios fixação\ex003\public\arquives'" class="form-control mb-3">
+
+                <textarea name="text" id="text" rows="5" placeholder="Digite suas anotações..." class="form-control mb-3" required></textarea>
+
+                <button type="reset" class="btn btn-danger">Limpar Documento</button>
+                <button class="btn btn-success">Salvar Documento</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,2 @@
+Estas são as minhas anotações de teste.
+Desenvolvendo funcionalidade de leitura de arquivos com a biblioteca fs (File System).

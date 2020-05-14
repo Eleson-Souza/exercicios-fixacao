@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navbar.ejs') %>
+<div class="container">
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <% if(error.length > 0) { %>
+                <div class="alert alert-danger">
+                    <%= error %>
+                </div>
+            <% } %>
+            <h2>Lendo arquivos de texto</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/read-document">
+                <input type="text" name="path" id="path" placeholder="Caminho onde o arquivo se encontra..." class="form-control mb-3" value="<%= path %>" required>
+
+                <input type="text" name="name" id="name" placeholder="Nome do arquivo..." class="form-control mb-3" value="<%= name %>" required>
+
+                <textarea name="text" id="text" rows="5" class="form-control mb-3" readonly><%= text %></textarea>
+
+                <button type="reset" class="btn btn-danger">Limpar</button>
+                <button class="btn btn-success">Carregar Documento</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>
