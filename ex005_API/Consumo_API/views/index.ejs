@@ -1,0 +1,44 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <h2>Todos os produtos</h2>
+
+    <a href="/produtos/cadastrar" class="btn btn-success mt-3">Cadastrar novo produto</a>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Quant.</th>
+            <th>Valor Unit.</th>
+            <th>Valor Total</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <% products.forEach(prod => { %>
+                <tr>
+                    <td> <%= prod.id %> </td>
+                    <td> <%= prod.name %> </td>
+                    <td> <%= prod.category %> </td>
+                    <td> <%= prod.amount %> </td>
+                    <td> R$ <%= prod.price %> </td>
+                    <td> R$ <%= prod.totalPrice %> </td>
+                    <td> 
+                        <a href="/produtos/editar/<%= prod.id %>" class="btn btn-warning">Editar</a>
+
+                        <form action="/produtos/deletar" method="post" style="display: inline;">
+                            <input type="hidden" name="id" value="<%= prod.id %>">
+
+                            <button class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<%- include('./partials/footer.ejs') %>

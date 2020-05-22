@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-header">
+            <h2>Edição de produto</h2>
+        </div>
+        <div class="card-body">
+            <form action="/produtos/editar/<%= product.id %>" method="post">
+                <input type="text" name="name" id="name" placeholder="Nome do produto..." class="form-control mb-3" value="<%= product.name %>">
+                <input type="text" name="category" id="category" placeholder="Defina uma categoria..." class="form-control mb-3" value="<%= product.category %>">
+                <input type="number" name="amount" id="amount" placeholder="Quantidade" class="form-control mb-3" value="<%= product.amount %>">
+                <input type="number" name="price" id="price" placeholder="Valor Unitário (R$)" class="form-control mb-3" value="<%= product.price %>">
+
+                <button type="reset" class="btn btn-danger">Limpar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

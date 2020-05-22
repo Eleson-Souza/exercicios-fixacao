@@ -3,6 +3,10 @@ const router = express.Router();
 const Writer = require('../Classes/Writer');
 const Reader = require('../Classes/Reader');
 
+router.get('/', (req, res) => {
+    res.redirect('save-document');
+});
+
 router.get('/save-document', (req, res) => {
     res.render('save', {success: req.flash('success'), error: req.flash('error')});
 });
